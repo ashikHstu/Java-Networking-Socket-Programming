@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(22222);
+        ServerSocket serverSocket = new ServerSocket(22223);
         System.out.println("Server Started..");
 
         while (true) {

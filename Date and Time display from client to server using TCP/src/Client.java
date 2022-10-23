@@ -5,17 +5,20 @@ import java.net.Socket;
 import java.util.Date;
 import java.util.Scanner;
 
+import static java.lang.Thread.sleep;
+
 public class Client {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("Client started..");
-        Socket socket = new Socket("127.0.0.1", 22222);
+        Socket socket = new Socket("127.0.0.1", 22223);
         System.out.println("Client Connected..");
 
         ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
-        int ct=1;
+        int ct=2;
         while (ct>0) {
             ct--;
+          //  sleep(3333);
            // Scanner sc = new Scanner(System.in);
 
             String message = new Date().toString();
